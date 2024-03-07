@@ -49,7 +49,7 @@ section {
   scale: 0.9;
 }
 
-a .tooltip {
+#tooltip {
   position: absolute;
   opacity: 0;
   top: -2rem;
@@ -63,7 +63,7 @@ a .tooltip {
   padding: 4px 2px;
 }
 
-a .tooltip::after {
+#tooltip::after {
   content: '';
   position: absolute;
   bottom: -9px;
