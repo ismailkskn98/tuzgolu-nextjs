@@ -4,8 +4,7 @@ export default function Document() {
   return (
     <Html lang="tr">
       <Head>
-        {/* <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
         <meta name="distribution" content="global" />
         <meta name="copyright" content="Copyright © 2024 Tuzgölü Motorlu Araçlar tescillenmiş markadır, Tüm Hakları Saklıdır." />
         <meta name="content-language" content="tr" />
@@ -20,7 +19,7 @@ export default function Document() {
         <meta
           name="keywords"
           content="tuzgölü, tuzgölümotor, tuzgölümotorluaraçlar, ankaramotor, ankaramotorluaraçlar, dolmuş, mercedes"
-        /> */}
+        />
         <link rel="canonical" href="https://www.tuzgolumotorluaraclar.com/" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>

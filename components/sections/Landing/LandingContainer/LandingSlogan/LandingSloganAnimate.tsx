@@ -1,5 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import { FC } from 'react';
+import styles from '@/styles/Landing.module.css';
 
 const LandingSloganAnimate: FC = () => {
   return (
@@ -10,7 +11,7 @@ const LandingSloganAnimate: FC = () => {
       speed={60}
       cursor={true}
       repeat={Infinity}
-      className="landing-title text-[40px] lg:text-6xl xl:text-8xl lg:text-left text-light-orange"
+      className={`${styles.landingTitle} landing-title text-[40px] lg:text-6xl xl:text-8xl lg:text-left text-light-orange`}
     />
   );
 };

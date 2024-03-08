@@ -64,8 +64,7 @@ const MobilNavbar: FC<MobilNavbarProps> = ({ navItems }) => {
                 width={100}
                 height={100}
                 src="/images/logo.png"
-                loading="lazy"
-                placeholder="blur"
+                priority={true}
                 alt="tuzgolu yedek parcalar"
                 className="w-36 max-h-20"
               />

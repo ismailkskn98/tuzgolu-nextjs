@@ -27,13 +27,6 @@ section {
   margin-right: auto;
 }
 
-.landing-title {
-  font-family: 'K2D', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  width: 100%;
-}
-
 /* contact */
 
 .form-item input:focus ~ label,
@@ -47,32 +40,6 @@ section {
 .form-item textarea:valid ~ label {
   top: -10px;
   scale: 0.9;
-}
-
-a .tooltip {
-  position: absolute;
-  opacity: 0;
-  top: -2rem;
-  left: 50%;
-  translate: -50% 0;
-  z-index: 2;
-  width: 6rem;
-  border-radius: 0.25rem;
-  font-size: 14px;
-  text-align: center;
-  padding: 4px 2px;
-}
-
-a .tooltip::after {
-  content: '';
-  position: absolute;
-  bottom: -9px;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  rotate: 180deg;
-  border-color: transparent transparent #d6e4e5 transparent;
 }
 
 @media only screen and (max-width: 1280px) {

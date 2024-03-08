@@ -1,9 +1,44 @@
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 import SosyalMediaIcon from '../../common/SosyalMediaIcon';
 import { IoMdMail } from 'react-icons/io';
 import { FaAddressBook } from 'react-icons/fa';
 import { BsFillPhoneFill } from 'react-icons/bs';
 // import './contact.css';
+
+type InfoItem = {
+  icon: ReactElement;
+  a: {
+    href: string;
+    target?: string;
+    content: string;
+  };
+};
+
+const infoItems: InfoItem[] = [
+  {
+    icon: <BsFillPhoneFill className="text-xl text-light-light" />,
+    a: {
+      href: 'tel:0538 849 00 63',
+      content: '0538 849 00 63',
+    },
+  },
+  {
+    icon: <IoMdMail className="text-xl text-light-light" />,
+    a: {
+      href: 'mailto:tuzgolumotorluaraclar@gmail.com',
+      target: '_blank',
+      content: 'tuzgolumotorluaraclar@gmail.com',
+    },
+  },
+  {
+    icon: <FaAddressBook className="text-xl text-light-light" />,
+    a: {
+      href: 'https://goo.gl/maps/2KKjkGtbyS3BnqA16',
+      target: '_blank',
+      content: 'Ostim OSB Mah. Örnek sanayi sitesi 1258 CAD. NO: 28/D',
+    },
+  },
+];
 
 const ContactInfo: FC = () => {
   return (
@@ -15,24 +50,13 @@ const ContactInfo: FC = () => {
         <p className="text-sm italic text-light-light">Bize buralardan canlı bir şekilde ulaşabilirsin!</p>
       </header>
       <article className="flex-grow flex flex-col gap-10">
-        <p>
-          <a href="tel:0538 849 00 63" className="flex items-center gap-3">
-            <BsFillPhoneFill className="text-xl text-light-light" />
-            <span className="text-sm">0538 849 00 63</span>
-          </a>
-        </p>
-        <p>
-          <a href="mailto:tuzgolumotorluaraclar@gmail.com" target="_blank" className="flex items-center gap-3">
-            <IoMdMail className="text-xl text-light-light" />
-            <span className="text-sm">tuzgolumotorluaraclar@gmail.com</span>
-          </a>
-        </p>
-        <p>
-          <a href="https://goo.gl/maps/2KKjkGtbyS3BnqA16" target="_blank" className="flex items-center gap-3">
-            <FaAddressBook className="text-xl text-light-light" />
-            <span className="text-sm">Ostim OSB Mah. Örnek sanayi sitesi 1258 CAD. NO: 28/D</span>
-          </a>
-        </p>
+        {infoItems.map(({ icon, a }: InfoItem, i: number) => (
+          <p key={i}>
+            <a className="flex items-center gap-3 hover:text-gray-100/50 " {...a}>
+              {icon} <span className="text-sm">{a.content}</span>
+            </a>
+          </p>
+        ))}
       </article>
       <SosyalMediaIcon />
     </main>

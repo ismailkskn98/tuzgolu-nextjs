@@ -1,0 +1,17 @@
+.landingBtn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 110%;
+  translate: -100% -5%;
+  /* scale: 0; */
+  background-color: #d6e4e5;
+  transition: all 0.15s ease-in;
+  z-index: -1;
+}
+
+.landingBtn:hover.landingBtn::after {
+  translate: -5% -5%;
+}
