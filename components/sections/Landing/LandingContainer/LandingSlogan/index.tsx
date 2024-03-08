@@ -6,7 +6,7 @@ import LandingBtn from '@/components/buttons/LandingBtn';
 const LandingSlogan: FC = () => {
   return (
     <article className="relative z-10 text-light-white flex flex-col items-center lg:items-start gap-5 w-full lg:w-[55%] mb-4 lg:mb-0 text-center lg:text-left">
-      <h1 className={`${styles.landingTitle} text-7xl lg:text-8xl lg:text-left`}>Tuzgölü</h1>
+      <h2 className={`${styles.landingTitle} text-7xl lg:text-8xl lg:text-left`}>Tuzgölü</h2>
       <LandingSloganAnimate />
       <h2 className={`${styles.landingTitle} text-3xl landing-title mb-1 before:content-['-'] before:text-light-orange`}>
         YILDIZ’ların üzerinde yükselen değeriniz

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Header from '@/components/common/Header/index';
 import Landing from '@/components/sections/Landing';
 // import Products from '../components/sections/Products/index';
-// import About from '../components/sections/About';
+import About from '../components/sections/About';
 // import Gallery from '../components/sections/Gallery';
 import Contact from '../components/sections/Contact';
 import Footer from '../components/common/Footer';
@@ -18,9 +18,9 @@ export default function Home() {
       <Provider store={store}>
         <Header />
         <Landing />
-        {/* <Products />
-      <About />
-    <Gallery /> */}
+        {/* <Products /> */}
+        <About />
+        {/* <Gallery /> */}
         <Contact />
         <Footer />
       </Provider>
