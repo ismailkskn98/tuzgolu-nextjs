@@ -8,7 +8,7 @@ const Content: FC = () => {
       <article className="w-full lg:w-[40%] relative flex items-center justify-center">
         <div className="absolute -bottom-6 right-3 lg:-bottom-6 lg:-right-6 bg-light-teal w-10/12 lg:w-full h-full -z-10 rounded"></div>
         <Image
-          src="/images/aboutPhoto.svg"
+          src="/images/about/aboutPhoto.svg"
           alt="tuzgolu motorlu araçlar hakkımızda"
           width={500}
           height={500}

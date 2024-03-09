@@ -12,3 +12,8 @@ export type FormItem = {
   label: string;
   type: string;
 };
+
+export type Product = {
+  name: string;
+  images: string[];
+};
