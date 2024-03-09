@@ -1,4 +1,35 @@
+.gallery div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-rows: repeat(2, minmax(251px, 251px));
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery div {
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: repeat(8, minmax(251px, 251px));
+    gap: 2rem;
+  }
+}
+
+.gallery a {
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
 .gallery img {
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
   transition: all 0.2s ease;
+  transform: scaleX(1);
+  object-fit: cover;
+}
+
+.gallery a:hover img {
+  transform: scaleX(-1);
 }

@@ -4,8 +4,8 @@ import { motion, useTransform, useViewportScroll } from 'framer-motion';
 
 const About: FC = () => {
   const { scrollYProgress } = useViewportScroll();
-  const animateLeft = useTransform(scrollYProgress, [0, 1], [0.2, 150]);
-  const animateRight = useTransform(scrollYProgress, [0, 1], [0.2, -150]);
+  const animateLeft = useTransform(scrollYProgress, [0, 1], [0.2, 300]);
+  const animateRight = useTransform(scrollYProgress, [0, 1], [0.2, -300]);
 
   return (
     <section id="hakkimizda" className="relative text-dark-gray dark:text-dark-white">
