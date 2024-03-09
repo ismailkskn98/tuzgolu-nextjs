@@ -3,7 +3,7 @@ import Header from '@/components/common/Header/index';
 import Landing from '@/components/sections/Landing';
 // import Products from '../components/sections/Products/index';
 import About from '../components/sections/About';
-// import Gallery from '../components/sections/Gallery';
+import Gallery from '../components/sections/Gallery';
 import Contact from '../components/sections/Contact';
 import Footer from '../components/common/Footer';
 import { Provider } from 'react-redux';
@@ -20,7 +20,7 @@ export default function Home() {
         <Landing />
         {/* <Products /> */}
         <About />
-        {/* <Gallery /> */}
+        <Gallery />
         <Contact />
         <Footer />
       </Provider>

@@ -9,7 +9,7 @@ const About: FC = () => {
 
   return (
     <section id="hakkimizda" className="relative text-dark-gray dark:text-dark-white">
-      <header className="wrapper mx-auto">
+      <header className="wrapper">
         <h1 className="pb-4 font-bold text-5xl w-full text-center">Hakkımızda</h1>
         <p className="desc text-light-teal/60 dark:text-gray-400 italic text-center">Biz Kimiz?</p>
       </header>

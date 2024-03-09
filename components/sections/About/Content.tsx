@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import style from '@/styles/About.module.css';
 
 const Content: FC = () => {
   return (
@@ -17,23 +18,27 @@ const Content: FC = () => {
           className="w-10/12 lg:min-w-full rounded shadow-xl"
         />
       </article>
-      <article className="w-full lg:w-[60%] flex flex-col items-center gap-3">
+      <article className={`w-full lg:w-[60%] flex flex-col items-center gap-3`}>
         <h2 className="text-3xl font-semibold mb-3">Biz Kimiz?</h2>
-        <p>
-          <span className="font-semibold">Tuzgölü Motorlu Araçlar</span> mercedes Benz hafif ticari (sprinter) araçlarınızın
-          mekanik tamir bakım ve yedek parça Tedariğinin yapılması, yolda kalınan durumlarda yol yardımının sağlanması amacıyla
-          sizler için vardır.
-        </p>
-        <p>
-          Köklü ustalık sanatımızla firmamız bünyesinde yapılan tüm işlerde kazancın iki tarafında yararına olması en büyük
-          prensibimizdir. Sizlere verilen hizmetin her türlü arkasında olduğumuzu taahhüt ederiz. Bizleri ziyaret edebilirsiniz,
-          sizleri
-          <span className="font-semibold"> Ankara Yenimahalle</span>’deki servisimizde ağırlamaktan memnuniyet duyarız.
-        </p>
-        <p>
-          “Gerek servisimizde gerek yolda kalınan durumlarda her türlü bakım onarım tamirat ve mekanik hizmetleri için güvenle
-          arayabilirsiniz.”⚙️🔧🛠
-        </p>
+        <ul className={`${style.pLine} flex flex-col items-center gap-3`}>
+          <li className={`${style.paragraf}`}>
+            <span className="font-semibold">Tuzgölü Motorlu Araçlar</span> mercedes Benz hafif ticari (sprinter) araçlarınızın
+            mekanik tamir bakım ve yedek parça Tedariğinin yapılması, yolda kalınan durumlarda yol yardımının sağlanması amacıyla
+            sizler için vardır.
+          </li>
+          <li className={`${style.paragraf}`}>
+            Köklü ustalık sanatımızla firmamız bünyesinde yapılan tüm işlerde kazancın iki tarafında yararına olması en büyük
+            prensibimizdir.
+          </li>
+          <li className={`${style.paragraf}`}>
+            Sizlere verilen hizmetin her türlü arkasında olduğumuzu taahhüt ederiz. Bizleri ziyaret edebilirsiniz, sizleri
+            <span className="font-semibold"> Ankara Yenimahalle</span>’deki servisimizde ağırlamaktan memnuniyet duyarız.
+          </li>
+          <li className={`${style.paragraf}`}>
+            “Gerek servisimizde gerek yolda kalınan durumlarda her türlü bakım onarım tamirat ve mekanik hizmetleri için güvenle
+            arayabilirsiniz.”⚙️🔧🛠
+          </li>
+        </ul>
       </article>
     </main>
   );
