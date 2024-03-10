@@ -15,12 +15,12 @@ type Props = {
 
 const Product: FC<Props> = ({ product }) => {
   return (
-    <article className="border rounded-md shadow-md">
+    <article className="rounded-md shadow-md p-5 bg-light-white dark:bg-dark-black flex flex-col items-center gap-4">
       <Swiper
         navigation={true}
         pagination={true}
         grabCursor={true}
-        className="w-[390px] h-[390px]"
+        className="w-[390px] h-[390px] relative"
         effect={'creative'}
         creativeEffect={{
           prev: {
@@ -35,11 +35,22 @@ const Product: FC<Props> = ({ product }) => {
       >
         {product.images.map((item, i) => (
           <SwiperSlide key={i} className="flex items-center justify-center">
-            <Image src={item} alt={product.name} width={100} height={100} className="w-full h-full object-cover rounded-t-md" />
+            <Image
+              src={item}
+              alt={product.name}
+              width={100}
+              height={100}
+              className="w-full h-full object-cover rounded object-center-"
+            />
+            {product.id == 1 && (
+              <p className="w-[101%] text-center py-2 absolute bottom-9 left-1/2 -translate-x-1/2 backdrop-blur-xl bg-light-white/60 text-dark-gray dark:text-dark-white dark:bg-dark-black/60 text-lg font-semibold">
+                Parça No: 010 41 27
+              </p>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>
-      <p className="font-semibold text-center py-3">{product.name}</p>
+      <p className="font-semibold text-lg text-center capitalize">{product.name}</p>
     </article>
   );
 };
