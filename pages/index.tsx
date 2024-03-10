@@ -8,6 +8,7 @@ import Contact from '@/components/sections/Contact';
 import Footer from '@/components/common/Footer';
 import { Provider } from 'react-redux';
 import { store } from '@/lib/store';
+import Whatsapp from '@/components/common/Whatsapp';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Provider store={store}>
         <Header />
+        <Whatsapp />
         <Landing />
         <Products />
         <About />
