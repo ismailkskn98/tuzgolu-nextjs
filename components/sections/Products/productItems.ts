@@ -48,10 +48,10 @@ export const productItems: Product[] = [
   },
   {
     name: '651 sprinter şarj dinamosu',
-    images: ['/images/products/urun7-1.jpg', '/images/products/urun7-2.jpg'],
+    images: ['/images/products/urun8.jpg'],
   },
   {
     name: '651 sprinter şanzıman',
-    images: ['/images/products/urun8.jpg', '/images/products/urun9.jpg'],
+    images: ['/images/products/urun9.jpg'],
   },
 ];

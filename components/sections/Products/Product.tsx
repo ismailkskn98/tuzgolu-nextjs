@@ -5,7 +5,9 @@ import { Product } from '@/types/types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
-import { EffectCreative } from 'swiper/modules';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { EffectCreative, Pagination, Navigation } from 'swiper/modules';
 
 type Props = {
   product: Product;
@@ -13,9 +15,12 @@ type Props = {
 
 const Product: FC<Props> = ({ product }) => {
   return (
-    <article className="border">
+    <article className="border rounded-md shadow-md">
       <Swiper
+        navigation={true}
+        pagination={true}
         grabCursor={true}
+        className="w-[390px] h-[390px]"
         effect={'creative'}
         creativeEffect={{
           prev: {
@@ -26,19 +31,15 @@ const Product: FC<Props> = ({ product }) => {
             translate: ['100%', 0, 0],
           },
         }}
-        modules={[EffectCreative]}
-        className="mySwiper3"
+        modules={[EffectCreative, Pagination, Navigation]}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {product.images.map((item, i) => (
+          <SwiperSlide key={i} className="flex items-center justify-center">
+            <Image src={item} alt={product.name} width={100} height={100} className="w-full h-full object-cover rounded-t-md" />
+          </SwiperSlide>
+        ))}
       </Swiper>
+      <p className="font-semibold text-center py-3">{product.name}</p>
     </article>
   );
 };
