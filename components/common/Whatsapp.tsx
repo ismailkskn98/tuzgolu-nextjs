@@ -13,16 +13,28 @@ const Whatsapp: FC = () => {
           <Controls buttons={['play', 'repeat', 'frame', 'debug']} />
         </Player>
       </a>
-      <a
-        href="https://wa.me/05388490063"
-        target="_blank"
-        className="group flex items-center justify-center gap-3 lg:hidden fixed bottom-0 right-0 z-50 w-full cursor-pointer dark:bg-dark-black dark:text-white"
-      >
-        <span className="text-lg font-semibold transition-all group-hover:text-[#23B33A]">0 538 849 00 63</span>
-        <Player autoplay loop src="./whatsapp.json" className="w-[70px]">
-          <Controls buttons={['play', 'repeat', 'frame', 'debug']} />
-        </Player>
-      </a>
+      <main className="flex items-center lg:hidden fixed bottom-0 right-0 z-50 w-full ">
+        <a
+          href="tel:0538 849 00 63"
+          target="_blank"
+          className="group w-1/2 h-full flex items-center justify-center gap-3 cursor-pointer bg-light-teal text-white"
+        >
+          <span className="text-lg font-semibold transition-all group-hover:text-[#23B33A]">Bizi Arayın</span>
+          <Player autoplay loop src="./phone.json" className="w-[60px]">
+            <Controls buttons={['play', 'repeat', 'frame', 'debug']} />
+          </Player>
+        </a>
+        <a
+          href="https://wa.me/05388490063"
+          target="_blank"
+          className="group w-1/2 h-full flex items-center justify-center gap-3 cursor-pointer bg-dark-gray text-white"
+        >
+          <span className="text-lg font-semibold transition-all group-hover:text-[#23B33A]">Whatsapp</span>
+          <Player autoplay loop src="./whatsapp.json" className="w-[60px]">
+            <Controls buttons={['play', 'repeat', 'frame', 'debug']} />
+          </Player>
+        </a>
+      </main>
     </>
   );
 };

@@ -7,6 +7,8 @@ import { RiMenu3Line } from 'react-icons/ri';
 import { useActiveNav } from '@/hooks/useActiveNav';
 import { useIsScroll } from '@/hooks/useIsScroll';
 import Image from 'next/image';
+import SosyalMediaIcon from '../../SosyalMediaIcon';
+import { FiInstagram } from 'react-icons/fi';
 
 type MobilNavbarProps = {
   navItems: NavItems[];
@@ -50,9 +52,9 @@ const MobilNavbar: FC<MobilNavbarProps> = ({ navItems }) => {
           <motion.div
             initial={{ translateX: '600px' }}
             animate={{ translateX: '0px' }}
-            exit={{ translateX: '600px' }}
+            exit={{ translateX: '1000px' }}
             transition={{ type: 'spring', stiffness: 600, damping: 50 }}
-            className="h-full w-full fixed top-0 left-0 z-[60] px-6 pb-10 flex flex-col items-center gap-14  bg-light-white text-black dark:text-dark-white dark:bg-dark-black"
+            className="h-full w-full fixed top-0 left-0 z-100 px-6 pb-10 flex flex-col items-center gap-14  bg-light-light text-black dark:text-dark-white dark:bg-dark-black"
           >
             <motion.header
               initial={{ opacity: 0 }}
@@ -94,9 +96,15 @@ const MobilNavbar: FC<MobilNavbarProps> = ({ navItems }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.9 }}
-              className="w-full flex justify-between"
+              className="w-full flex justify-between mb-16"
             >
-              <ThemeBtn /> A
+              <ThemeBtn />
+              <a
+                href="https://www.instagram.com/tuzgolumotorluaraclar06/"
+                className="relative flex items-center justify-center w-11 h-11 rounded-full border-none bg-[#d44071]"
+              >
+                <FiInstagram className="text-xl text-white" />
+              </a>
             </motion.footer>
           </motion.div>
         )}

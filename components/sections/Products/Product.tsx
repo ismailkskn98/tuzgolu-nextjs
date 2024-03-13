@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { FC } from 'react';
 import { Product } from '@/types/types';
+import styles from '@/styles/Product.module.css';
 // Import Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -15,7 +16,7 @@ type Props = {
 
 const Product: FC<Props> = ({ product }) => {
   return (
-    <article className="rounded-md shadow-md p-5 bg-light-white dark:bg-dark-black flex flex-col items-center gap-4">
+    <article className={`${styles.product} rounded-lg p-5 bg-light-white dark:bg-dark-black flex flex-col items-center gap-4`}>
       <Swiper
         navigation={true}
         pagination={true}
