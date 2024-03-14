@@ -19,8 +19,8 @@ const Whatsapp: FC = () => {
           target="_blank"
           className="group w-1/2 h-full flex items-center justify-center gap-3 cursor-pointer bg-light-teal text-white"
         >
-          <span className="text-lg font-semibold transition-all group-hover:text-[#23B33A]">Bizi Arayın</span>
-          <Player autoplay loop src="./phone.json" className="w-[60px]">
+          <span className="font-semibold transition-all group-hover:text-[#23B33A]">Bizi Arayın</span>
+          <Player autoplay loop src="./phone.json" className="w-[50px]">
             <Controls buttons={['play', 'repeat', 'frame', 'debug']} />
           </Player>
         </a>
@@ -29,8 +29,8 @@ const Whatsapp: FC = () => {
           target="_blank"
           className="group w-1/2 h-full flex items-center justify-center gap-3 cursor-pointer bg-dark-gray text-white"
         >
-          <span className="text-lg font-semibold transition-all group-hover:text-[#23B33A]">Whatsapp</span>
-          <Player autoplay loop src="./whatsapp.json" className="w-[60px]">
+          <span className="font-semibold transition-all group-hover:text-[#23B33A]">Whatsapp</span>
+          <Player autoplay loop src="./whatsapp.json" className="w-[50px]">
             <Controls buttons={['play', 'repeat', 'frame', 'debug']} />
           </Player>
         </a>

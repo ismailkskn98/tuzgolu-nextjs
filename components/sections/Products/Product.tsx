@@ -21,7 +21,7 @@ const Product: FC<Props> = ({ product }) => {
         navigation={true}
         pagination={true}
         grabCursor={true}
-        className="w-[390px] h-[390px] relative"
+        className=" w-[300px] h-[300px] lg:w-[390px] lg:h-[390px] relative"
         effect={'creative'}
         creativeEffect={{
           prev: {
