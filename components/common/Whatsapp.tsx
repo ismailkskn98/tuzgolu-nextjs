@@ -13,7 +13,7 @@ const Whatsapp: FC = () => {
           <Controls buttons={['play', 'repeat', 'frame', 'debug']} />
         </Player>
       </a>
-      <main className="flex items-center lg:hidden fixed bottom-0 right-0 z-50 w-full ">
+      <main className="flex items-center lg:hidden fixed bottom-0 w-full z-50  ">
         <a
           href="tel:0538 849 00 63"
           target="_blank"

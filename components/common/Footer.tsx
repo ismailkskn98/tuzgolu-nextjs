@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Footer: FC = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="relative w-full py-6 bg-light-teal dark:bg-dark-black mt-36">
+    <footer className="relative w-full py-6 bg-light-teal dark:bg-dark-black mt-36 mb-10">
       <div className="absolute -top-8 left-0 w-full min-h-12 bg-footer-light-bg dark:bg-footer-dark-bg bg-no-repeat bg-center bg-cover"></div>
       <main className="wrapper flex flex-col gap-5 lg:gap-0 lg:flex-row items-center justify-between">
         <article>
