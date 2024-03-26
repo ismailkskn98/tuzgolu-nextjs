@@ -7,7 +7,7 @@ const Whatsapp: FC = () => {
       <a
         href="https://wa.me/05388490063"
         target="_blank"
-        className="hidden lg:flex fixed bottom-8 right-8 z-50 w-[105px] cursor-pointer"
+        className="hidden lg:flex fixed bottom-8 right-8 z-50 w-[80px] cursor-pointer"
       >
         <Player autoplay loop src="./whatsapp.json" className="w-full">
           <Controls buttons={['play', 'repeat', 'frame', 'debug']} />
