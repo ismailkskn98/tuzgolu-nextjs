@@ -36,7 +36,7 @@ const Header: FC = () => {
           height={100}
           priority={true}
           // unoptimized
-          className={`transition-all ${isScroll ? 'max-h-[54px] lg:w-32 lg:max-h-[70px]' : 'w-36 max-h-20 lg:max-h-24 lg:w-44'}`}
+          className={`transition-all hidden lg:block ${isScroll ? 'max-h-[54px] lg:w-32 lg:max-h-[70px]' : 'w-36 max-h-20 lg:max-h-24 lg:w-44'}`}
         />
         <Navbar navItems={navItems} />
         <MobilNavbar navItems={navItems} />

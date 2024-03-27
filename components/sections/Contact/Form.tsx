@@ -18,9 +18,9 @@ const initialValues: InitialValues = {
 
 const ContactForm: FC = () => {
   const formRef = useRef<HTMLFormElement>(null); // Ref'i null olarak başlatın
-  const serviceID: string = process.env.SERVICE_ID || '';
-  const templateID: string = process.env.TEMPLATE_ID || '';
-  const publicKey: string = process.env.PUBLIC_KEY || '';
+  const serviceID: string = 'service_rzer3yo';
+  const templateID: string = 'template_xemp68n';
+  const publicKey: string = 'HJq3Nr_EGcCi_hiGv';
 
   // Form Submit => https://www.emailjs.com/
   const onSubmit = (values: InitialValues, actions: FormikHelpers<InitialValues>) => {
