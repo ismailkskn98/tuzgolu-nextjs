@@ -2,10 +2,14 @@ import * as Yup from 'yup';
 
 export const contactSchema = Yup.object({
   firstName: Yup.string()
+    .trim('*Kişi adı önde ve sonda boşluk içeremez')
+    .strict()
     .min(3, '*En az 3 karakter giriniz')
     .max(20, '*En fazla 20 karakter girebilirsiniz')
     .required('*Ad alanı zorunludur'),
   lastName: Yup.string()
+    .trim('*Kişi soyadı önde ve sonda boşluk içeremez')
+    .strict()
     .min(3, '*En az 3 karakter giriniz')
     .max(20, '*En fazla 20 karakter girebilirsiniz')
     .required('*Soyad alanı zorunludur'),
@@ -14,6 +18,8 @@ export const contactSchema = Yup.object({
     .required('*Telefon alanı zorunludur'),
   email: Yup.string().email('*Geçerli bir email giriniz').required('*Email alanı zorunludur'),
   message: Yup.string()
+    .trim('*Mesaj alanı önde ve sonda boşluk içeremez')
+    .strict()
     .min(5, '*En az 5 karakter giriniz')
     .max(300, '*En fazla 300 karakter girebilirsiniz')
     .required('*Mesaj alanı zorunludur'),
