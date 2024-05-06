@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { FC } from 'react';
-import { Product } from '@/types/types';
+import { Product as ProductType } from '@/types/types';
 // Import Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import { EffectCreative, Pagination, Navigation } from 'swiper/modules';
 
 type Props = {
-  product: Product;
+  product: ProductType;
 };
 
 const Product: FC<Props> = ({ product }) => {
@@ -40,7 +40,7 @@ const Product: FC<Props> = ({ product }) => {
               alt={product.name}
               width={100}
               height={100}
-              className="w-full h-full object-cover rounded object-center-"
+              className="w-full h-full object-cover rounded object-center"
             />
             {product.id == 1 && (
               <p className="w-[101%] text-center py-2 absolute bottom-9 left-1/2 -translate-x-1/2 backdrop-blur-xl bg-light-white/60 text-dark-gray dark:text-dark-white dark:bg-dark-black/60 text-lg font-semibold">
