@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import { FC } from 'react';
-import { Product as ProductType } from '@/types/types';
+import Image from "next/image";
+import { FC } from "react";
+import { Product as ProductType } from "@/types/types";
 // Import Swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-creative';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { EffectCreative, Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-creative";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { EffectCreative, Pagination, Navigation } from "swiper/modules";
 
 type Props = {
   product: ProductType;
@@ -15,20 +15,22 @@ type Props = {
 
 const Product: FC<Props> = ({ product }) => {
   return (
-    <article className={`shadow-md rounded-lg p-5 bg-light-white dark:bg-dark-black flex flex-col items-center gap-4`}>
+    <article
+      className={`shadow-md rounded-lg p-5 bg-light-white dark:bg-dark-black flex flex-col items-center gap-4`}
+    >
       <Swiper
         navigation={true}
         pagination={true}
         grabCursor={true}
         className=" w-[300px] h-[300px] lg:w-[390px] lg:h-[390px] relative"
-        effect={'creative'}
+        effect={"creative"}
         creativeEffect={{
           prev: {
             shadow: true,
-            translate: ['-20%', 0, -1],
+            translate: ["-20%", 0, -1],
           },
           next: {
-            translate: ['100%', 0, 0],
+            translate: ["100%", 0, 0],
           },
         }}
         modules={[EffectCreative, Pagination, Navigation]}
@@ -40,6 +42,9 @@ const Product: FC<Props> = ({ product }) => {
               alt={product.name}
               width={100}
               height={100}
+              placeholder="blur"
+              loading="lazy"
+              blurDataURL="https://cdn.webtekno.com/media/cache/content_detail_v2/article/109144/araba-motor-nedir-nasil-calisir-1619442699.jpg"
               className="w-full h-full object-cover rounded object-center"
             />
             {product.id == 1 && (
