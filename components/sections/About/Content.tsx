@@ -12,8 +12,7 @@ const Content: FC = () => {
           alt="tuzgolu motorlu araçlar hakkımızda"
           width={500}
           height={500}
-          loading="lazy"
-          placeholder="empty"
+          priority
           className="w-10/12 lg:min-w-full rounded shadow-xl"
         />
       </article>
@@ -21,24 +20,21 @@ const Content: FC = () => {
         <h2 className="text-3xl font-semibold mb-3">Biz Kimiz?</h2>
         <ul className={`${style.pLine} flex flex-col items-center gap-3`}>
           <li className={`${style.paragraf}`}>
-            <span className="font-semibold">Tuzgölü Motorlu Araçlar</span> mercedes Benz hafif
-            ticari (sprinter) araçlarınızın mekanik tamir bakım ve yedek parça Tedariğinin
-            yapılması, yolda kalınan durumlarda yol yardımının sağlanması amacıyla sizler için
-            vardır.
+            <span className="font-semibold">Tuzgölü Motorlu Araçlar</span> mercedes Benz hafif ticari (sprinter)
+            araçlarınızın mekanik tamir bakım ve yedek parça Tedariğinin yapılması, yolda kalınan durumlarda yol yardımının
+            sağlanması amacıyla sizler için vardır.
           </li>
           <li className={`${style.paragraf}`}>
-            Köklü ustalık sanatımızla firmamız bünyesinde yapılan tüm işlerde kazancın iki tarafında
-            yararına olması en büyük prensibimizdir.
+            Köklü ustalık sanatımızla firmamız bünyesinde yapılan tüm işlerde kazancın iki tarafında yararına olması en büyük
+            prensibimizdir.
           </li>
           <li className={`${style.paragraf}`}>
-            Sizlere verilen hizmetin her türlü arkasında olduğumuzu taahhüt ederiz. Bizleri ziyaret
-            edebilirsiniz, sizleri
-            <span className="font-semibold"> Ankara Yenimahalle</span>’deki servisimizde
-            ağırlamaktan memnuniyet duyarız.
+            Sizlere verilen hizmetin her türlü arkasında olduğumuzu taahhüt ederiz. Bizleri ziyaret edebilirsiniz, sizleri
+            <span className="font-semibold"> Ankara Yenimahalle</span>’deki servisimizde ağırlamaktan memnuniyet duyarız.
           </li>
           <li className={`${style.paragraf}`}>
-            “Gerek servisimizde gerek yolda kalınan durumlarda her türlü bakım onarım tamirat ve
-            mekanik hizmetleri için güvenle arayabilirsiniz.”⚙️🔧🛠
+            “Gerek servisimizde gerek yolda kalınan durumlarda her türlü bakım onarım tamirat ve mekanik hizmetleri için
+            güvenle arayabilirsiniz.”⚙️🔧🛠
           </li>
         </ul>
       </article>

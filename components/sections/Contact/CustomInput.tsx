@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import { useField } from 'formik';
-import { BsFillPersonVcardFill } from 'react-icons/bs';
-import { MdOutlinePhoneAndroid } from 'react-icons/md';
-import { MdAlternateEmail } from 'react-icons/md';
+import { FC } from "react";
+import { useField } from "formik";
+import { BsFillPersonVcardFill } from "react-icons/bs";
+import { MdOutlinePhoneAndroid } from "react-icons/md";
+import { MdAlternateEmail } from "react-icons/md";
 
 type CustomInputProps = {
   id: string;
@@ -16,16 +16,16 @@ const CustomInput: FC<CustomInputProps> = (props) => {
 
   const formIcon = () => {
     switch (props.id) {
-      case 'firstName':
+      case "firstName":
         return <BsFillPersonVcardFill />;
-      case 'lastName':
+      case "lastName":
         return <BsFillPersonVcardFill />;
-      case 'phone':
+      case "phone":
         return <MdOutlinePhoneAndroid />;
-      case 'email':
+      case "email":
         return <MdAlternateEmail />;
       default:
-        '';
+        "";
         break;
     }
   };
@@ -39,7 +39,7 @@ const CustomInput: FC<CustomInputProps> = (props) => {
           required
           autoComplete="off"
           className={`px-3 py-4 rounded w-full outline-none border bg-transparent text-dark-gray dark:text-gray-300 text-xs ${
-            error && touched ? 'border-light-orange' : 'dark:border-gray-600 border-gray-300'
+            error && touched ? "border-light-orange" : "dark:border-gray-600 border-gray-300"
           }`}
         />
         <label
@@ -50,12 +50,14 @@ const CustomInput: FC<CustomInputProps> = (props) => {
         </label>
         <span
           className={`absolute top-1/2 -translate-y-1/2 right-3 text-[16px] tracking-wide ${
-            error && touched ? 'text-light-orange' : 'text-dark-gray dark:text-gray-300'
+            error && touched ? "text-light-orange" : "text-dark-gray dark:text-gray-300"
           }`}
         >
           {formIcon()}
         </span>
-        {error && touched && <div className="text-xs text-light-orange absolute -top-5 right-0">{error}</div>}
+        {error && touched && (
+          <div className="text-xs text-light-orange absolute -top-5 right-0">{error}</div>
+        )}
       </article>
     </>
   );
